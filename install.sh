@@ -1,5 +1,5 @@
 #!/bin/bash
-# Grumpyvim2 Installation Script
+# Grumpyvim Installation Script
 # Installs dependencies and sets up the Neovim configuration
 
 set -e  # Exit on error

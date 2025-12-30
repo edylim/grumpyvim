@@ -2,7 +2,7 @@
   <img src="static/grumpy-vim.png" />
 </p>
 
-# Grumpyvim2
+# Grumpyvim
 
 A personalized Neovim configuration built on [LazyVim](https://www.lazyvim.org/).
 
@@ -30,10 +30,10 @@ This is the spiritual successor to grumpyvim, rebuilt on top of the LazyVim dist
 
 ```bash
 # Clone the repository
-git clone https://github.com/edylim/grumpy-vim ~/.config/nvim-grumpyvim2
+git clone https://github.com/edylim/grumpy-vim ~/.config/grumpyvim
 
 # Run the install script
-cd ~/.config/nvim-grumpyvim2/grumpyvim2
+cd ~/.config/grumpyvim
 chmod +x install.sh
 ./install.sh
 ```
@@ -47,8 +47,8 @@ brew bundle --file=Brewfile
 # Backup existing config (if any)
 mv ~/.config/nvim ~/.config/nvim.backup
 
-# Symlink grumpyvim2
-ln -s /path/to/grumpyvim2 ~/.config/nvim
+# Symlink grumpyvim
+ln -s /path/to/grumpyvim ~/.config/nvim
 
 # Launch Neovim (plugins install automatically)
 nvim
@@ -141,7 +141,7 @@ Leader key: `Space`
 ## Structure
 
 ```
-grumpyvim2/
+grumpyvim/
 ├── init.lua              # Entry point
 ├── lua/
 │   ├── config/
@@ -166,7 +166,7 @@ grumpyvim2/
 
 ## Updating
 
-Grumpyvim2 is built on LazyVim, so updates are easy:
+Grumpyvim is built on LazyVim, so updates are easy:
 
 ```vim
 :Lazy update
@@ -195,8 +195,8 @@ Pre-configured LSP support for:
 
 ## Differences from Original Grumpyvim
 
-| Feature | Grumpyvim | Grumpyvim2 |
-|---------|-----------|------------|
+| Feature | Old Grumpyvim | Grumpyvim (current) |
+|---------|---------------|---------------------|
 | Base | Custom | LazyVim |
 | Plugin Manager | lazy.nvim | lazy.nvim |
 | File Explorer | nvim-tree | neo-tree |
