@@ -30,7 +30,7 @@ This is the successor to the original grumpyvim, rebuilt on top of the LazyVim d
 
 ```bash
 # Clone the repository
-git clone https://github.com/edylim/grumpy-vim ~/.config/grumpyvim
+git clone https://github.com/edylim/grumpyvim ~/.config/grumpyvim
 
 # Run the install script
 cd ~/.config/grumpyvim
