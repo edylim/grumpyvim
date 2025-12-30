@@ -9,8 +9,9 @@ return {
     "knubie/vim-kitty-navigator",
     lazy = false, -- Must load immediately for navigation to work
     init = function()
-      -- Don't use default mappings, we use Ctrl+hjkl which LazyVim already sets up
-      vim.g.kitty_navigator_no_mappings = 0
+      -- Disable plugin's default mappings - we set them explicitly in keymaps.lua
+      -- after deleting LazyVim's Ctrl+hjkl keymaps
+      vim.g.kitty_navigator_no_mappings = 1
     end,
   },
 

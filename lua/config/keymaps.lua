@@ -24,6 +24,17 @@ end, { desc = "Show all keymappings" })
 -- WINDOWS (leader-w prefix)
 -- ============================================================================
 
+-- Replace LazyVim's Ctrl+hjkl keymaps with vim-kitty-navigator commands
+-- This enables seamless navigation between vim splits and kitty terminal panes
+vim.keymap.del("n", "<C-h>")
+vim.keymap.del("n", "<C-j>")
+vim.keymap.del("n", "<C-k>")
+vim.keymap.del("n", "<C-l>")
+km.set("n", "<C-h>", "<cmd>KittyNavigateLeft<cr>", { silent = true })
+km.set("n", "<C-j>", "<cmd>KittyNavigateDown<cr>", { silent = true })
+km.set("n", "<C-k>", "<cmd>KittyNavigateUp<cr>", { silent = true })
+km.set("n", "<C-l>", "<cmd>KittyNavigateRight<cr>", { silent = true })
+
 -- Window splits (grumpyvim uses w| and w-, LazyVim uses | and -)
 km.set("n", "<leader>w|", "<C-w>v", { desc = "Split window right" })
 km.set("n", "<leader>w-", "<C-w>s", { desc = "Split window below" })
