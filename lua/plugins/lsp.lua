@@ -7,6 +7,8 @@ return {
   {
     "mason-org/mason.nvim",
     opts = {
+      -- Serialize installs to avoid "Package is already installing" race condition
+      max_concurrent_installers = 1,
       ensure_installed = {
         -- LSP servers
         "html-lsp",

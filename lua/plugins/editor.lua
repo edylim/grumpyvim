@@ -2,6 +2,16 @@
 -- Only override what's necessary, use opts tables
 
 return {
+  -- Treesitter: suppress install window, keep error logging
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = function(_, opts)
+      opts.install = opts.install or {}
+      opts.install.silent = true
+      return opts
+    end,
+  },
+
   -- Seamless navigation between Neovim and Kitty terminal panes
   {
     "knubie/vim-kitty-navigator",
