@@ -82,6 +82,14 @@ git clone https://github.com/edylim/grumpyvim.git ~/.config/nvim
 nvim
 ```
 
+## Uninstall
+
+```bash
+~/.config/nvim/uninstall.sh
+```
+
+This removes the config and all Neovim data directories. If a backup exists from installation, you'll be prompted to restore it. Dependencies (neovim, ripgrep, fd, lazygit) are not removed automatically.
+
 ## Keybindings
 
 Leader key: `Space`
