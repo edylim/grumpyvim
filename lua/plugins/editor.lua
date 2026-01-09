@@ -95,7 +95,9 @@ return {
   {
     "folke/which-key.nvim",
     opts = {
+      preset = "classic", -- bottom of screen
       spec = {
+        { "<leader>a", group = "ai" },
         { "<leader>g", group = "git" },
         { "<leader>h", group = "harpoon" },
         { "<leader>l", group = "lsp" },

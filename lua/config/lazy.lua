@@ -38,6 +38,9 @@ require("lazy").setup({
     -- UI extras
     { import = "lazyvim.plugins.extras.ui.treesitter-context" },
 
+    -- AI extras
+    { import = "lazyvim.plugins.extras.ai.claudecode" },
+
     -- Local plugins (customizations)
     { import = "plugins" },
   },
