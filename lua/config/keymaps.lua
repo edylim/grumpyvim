@@ -100,9 +100,9 @@ map("n", "<leader>pp", function()
   })
 end, { desc = "Switch project" })
 
--- Find file from any project (auto-switches context)
+-- Find file in project (auto-switches cwd to project root)
 map("n", "<leader>pf", function()
-  Snacks.picker.recent({
+  Snacks.picker.smart({
     confirm = function(picker, item)
       picker:close()
       if item then
@@ -115,7 +115,7 @@ map("n", "<leader>pf", function()
       end
     end,
   })
-end, { desc = "Find file (any project)" })
+end, { desc = "Find file" })
 
 -- Grep/search
 map("n", "<leader>/", function()
