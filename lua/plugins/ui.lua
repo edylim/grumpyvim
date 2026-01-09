@@ -22,16 +22,27 @@ return {
     },
   },
 
+  -- Noice: suppress install progress messages (not errors)
+  {
+    "folke/noice.nvim",
+    opts = {
+      routes = {
+        {
+          filter = { event = "msg_show", find = "nvim%-treesitter/install" },
+          opts = { skip = true },
+        },
+        {
+          filter = { event = "notify", find = "Package is already installing" },
+          opts = { skip = true },
+        },
+      },
+    },
+  },
+
   -- Snacks customization
   {
     "folke/snacks.nvim",
     opts = {
-      -- Filter out treesitter install messages
-      notifier = {
-        filter = function(notif)
-          return not (notif.msg and notif.msg:find("nvim%-treesitter/install"))
-        end,
-      },
       dashboard = {
         preset = {
           header = [[
