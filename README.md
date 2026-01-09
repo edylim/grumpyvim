@@ -64,6 +64,8 @@ Installs dependencies (neovim, ripgrep, fd, lazygit) and clones the config:
 bash <(curl -fsSL https://raw.githubusercontent.com/edylim/grumpyvim/main/install.sh)
 ```
 
+After cloning, you'll be prompted to set the git origin. Press Enter to use the default SSH URL, or enter your own fork's URL.
+
 ### Manual
 
 ```bash

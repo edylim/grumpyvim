@@ -51,6 +51,14 @@ fi
 echo "Cloning grumpyvim..."
 git clone "$REPO" "$NVIM_CONFIG"
 
+# Prompt to change git origin
+DEFAULT_ORIGIN="git@github.com:edylim/grumpyvim.git"
+echo ""
+read -p "New origin ($(printf '\033[2m%s\033[0m' "$DEFAULT_ORIGIN")): " NEW_ORIGIN
+NEW_ORIGIN="${NEW_ORIGIN:-$DEFAULT_ORIGIN}"
+git -C "$NVIM_CONFIG" remote set-url origin "$NEW_ORIGIN"
+echo "Git origin set to: $NEW_ORIGIN"
+
 echo ""
 echo "Grumpyvim installed successfully!"
 echo ""
