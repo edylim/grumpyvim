@@ -32,7 +32,7 @@ return {
           opts = { skip = true },
         },
         {
-          filter = { event = "notify", find = "Package is already installing" },
+          filter = { event = "msg_show", find = "Package is already installing" },
           opts = { skip = true },
         },
       },
