@@ -1,0 +1,8 @@
+# Generated files
+lazy-lock.json
+
+# Neovim
+.netrwhist
+
+# OS
+.DS_Store

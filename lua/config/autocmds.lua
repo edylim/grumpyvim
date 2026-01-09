@@ -1,0 +1,11 @@
+-- Custom autocommands (additions to LazyVim defaults)
+-- LazyVim already handles: highlight on yank, resize splits, last cursor position
+
+-- Add any custom autocommands here
+-- Example:
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = "markdown",
+--   callback = function()
+--     vim.opt_local.wrap = true
+--   end,
+-- })
