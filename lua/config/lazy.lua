@@ -35,6 +35,9 @@ require("lazy").setup({
     -- Editor extras
     { import = "lazyvim.plugins.extras.editor.harpoon2" },
 
+    -- Test extras
+    { import = "lazyvim.plugins.extras.test.core" },
+
     -- UI extras
     { import = "lazyvim.plugins.extras.ui.treesitter-context" },
 

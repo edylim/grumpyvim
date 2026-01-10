@@ -36,10 +36,11 @@ A LazyVim-based Neovim configuration with opinionated keybindings and sensible d
 ## Features
 
 - **LazyVim base** - Upgrade-safe customizations using `opts` tables
+- **Claude Code integration** - AI pair programming with full editor awareness via MCP
 - **Gruvbox dark theme** - Easy on the eyes
 - **Kitty terminal integration** - Seamless `<C-hjkl>` navigation between Neovim and Kitty panes
 - **Harpoon** - Quick file marks for fast navigation
-- **Project switching** - `<leader>pp` to switch projects, `<leader>pf` to find files across projects
+- **Project switching** - `<leader>pp` to switch projects, `<leader>pf` to find files
 - **Format on save** - Prettier, stylua, shfmt, gofumpt
 - **Language support** - TypeScript, Python, Go, Svelte, Tailwind CSS
 
@@ -48,6 +49,7 @@ A LazyVim-based Neovim configuration with opinionated keybindings and sensible d
 - Git
 - [Nerd Font](https://www.nerdfonts.com/) (for icons)
 - [Kitty terminal](https://sw.kovidgoyal.net/kitty/) (optional, for pane navigation)
+- [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) (optional, for AI integration)
 
 The installer handles dependencies automatically on:
 - **macOS** - via Homebrew
@@ -165,6 +167,19 @@ Leader key: `Space`
 | `<leader>gV` | Diff split |
 | `<leader>gs` | Git status picker |
 | `<leader>gb` | Blame line |
+
+### AI/Claude (`<leader>a`)
+
+| Key | Action |
+|-----|--------|
+| `<leader>ac` | Toggle Claude terminal |
+| `<leader>af` | Focus Claude |
+| `<leader>ab` | Add current buffer |
+| `<leader>as` | Send selection (visual) |
+| `<leader>ar` | Resume session |
+| `<leader>aC` | Continue session |
+| `<leader>aa` | Accept diff |
+| `<leader>ad` | Reject diff |
 
 ### Other
 
