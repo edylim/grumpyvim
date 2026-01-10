@@ -21,7 +21,7 @@ return {
   -- Inline color previews for CSS, hex, rgb, hsl
   {
     "norcalli/nvim-colorizer.lua",
-    event = "BufReadPost",
+    event = { "BufReadPost", "BufNewFile" },
     opts = {
       "css",
       "scss",

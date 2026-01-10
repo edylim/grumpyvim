@@ -149,18 +149,11 @@ map("n", "<leader>hh", function()
   require("harpoon"):list():prev()
 end, { desc = "Harpoon: prev" })
 
-map("n", "<leader>h1", function()
-  require("harpoon"):list():select(1)
-end, { desc = "Harpoon: file 1" })
-map("n", "<leader>h2", function()
-  require("harpoon"):list():select(2)
-end, { desc = "Harpoon: file 2" })
-map("n", "<leader>h3", function()
-  require("harpoon"):list():select(3)
-end, { desc = "Harpoon: file 3" })
-map("n", "<leader>h4", function()
-  require("harpoon"):list():select(4)
-end, { desc = "Harpoon: file 4" })
+for i = 1, 4 do
+  map("n", "<leader>h" .. i, function()
+    require("harpoon"):list():select(i)
+  end, { desc = "Harpoon: file " .. i })
+end
 
 -- ============================================================================
 -- LSP (<leader>l)
@@ -208,6 +201,6 @@ map({ "n", "v" }, "<leader>mp", function()
   require("conform").format({
     lsp_fallback = true,
     async = false,
-    timeout_ms = 3000,
+    timeout_ms = 1500,
   })
 end, { desc = "Format" })
